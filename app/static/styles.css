@@ -1,9 +1,42 @@
 
 body {
-    background-color: grey
-    }
+    background-color: #f3f4f6;
+    margin: 6vh 8vw
+}
 
+
+.sample-buttons-container {
+    display: flex;
+    gap: 15px;
+
+}
 
 .sample-buttons {
+    padding: 5px 10px;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 0.5rem;
+}
 
+
+#clinical-text {
+    width: 800px;
+    height: 300px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    margin-bottom: 20px
+}
+
+#submit-button {
+    background-color: #0090ff;
+    color: white;
+    padding: 8px 13px;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 0.5rem;
+}
+
+#submit-button:hover {
+    background-color: #0080ff;
 }
