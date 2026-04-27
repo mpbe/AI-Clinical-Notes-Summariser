@@ -9,16 +9,28 @@
     <h1>AI Clinical Notes Summariser - For Clinical Coding</h1>
 
     <div class="sample-buttons-container">
-        <button class="sample-buttons">Sample 1</button>
-        <button class="sample-buttons">Sample 2</button>
+        <button class="sample-buttons" type="button" onclick="loadSample(1)">Sample 1</button>
+        <button class="sample-buttons" type="button" onclick="loadSample(2)">Sample 2</button>
     </div>
 
     <p>Enter your clinical summary here or use the sample buttons above for examples:</p>
 
-    <textarea id="clinical-text" rows="20"></textarea>
+    <form method="post">
+        <textarea name="notes" id="clinical-text" rows="20"></textarea>
 
-    <div>
-        <button id="submit-button">Submit</button>
-    </div>
+        <div>
+            <button id="submit-button">Submit</button>
+        </div>
+    </form>
 </body>
 </html>
+
+<script>
+    function loadSample(sampleNumber) {
+        const samples = {
+            1: "test1",
+            2: "test2"
+        }
+        document.querySelector("textarea[name='notes']").value = samples[sampleNumber]
+    }
+</script>
