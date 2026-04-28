@@ -41,3 +41,8 @@ body {
 #submit-button:hover {
     background-color: #0080ff;
 }
+
+#ai-response {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}

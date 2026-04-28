@@ -15,13 +15,20 @@
 
     <p>Enter your clinical summary here or use the sample buttons above for examples:</p>
 
-    <form method="post">
+    <form method="post" onsubmit="{{url_for('main.index')}}">
         <textarea name="notes" id="clinical-text" rows="20"></textarea>
 
         <div>
-            <button id="submit-button">Submit</button>
+            <button id="submit-button" type="submit">Submit</button>
         </div>
     </form>
+
+    {%if response%}
+        <h2>Result:</h2>
+        <pre id="ai-response">
+            {{response}}
+        </pre>
+    {%endif%}
 </body>
 </html>
 
