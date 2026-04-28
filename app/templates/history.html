@@ -10,7 +10,7 @@
     <a href="{{url_for('main.index')}}">Back to main page</a>
 
     {%if not history%}
-        <p>No queries made so far!</p>
+        <p>No queries made so far this session!</p>
     {%else%}
         {%for h in history%}
             <h2 id="history-response">Response {{loop.index}}</h2>
