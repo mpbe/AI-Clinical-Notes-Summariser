@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Query History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Query History</h1>
+    <a href="{{url_for('main.index')}}">Back to main page</a>
+
+    {%if not history%}
+        <p>No queries made so far this session!</p>
+    {%else%}
+        {%for h in history%}
+            <h2 id="history-response">Response {{loop.index}}</h2>
+            <pre id="ai-response">{{h}}</pre>
+        {%endfor%}
+    {%endif%}
+</body>
+</html>
